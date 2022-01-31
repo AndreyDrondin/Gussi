@@ -1,0 +1,754 @@
+html,
+body {
+  font: 16px/1.5 "Rajdhani";
+  font-weight: 500;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-image {
+  position: fixed;
+  width: 44vw;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide__img {
+  width: 100%;
+  height: 100%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  bottom: 2.5rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.prev {
+  left: 3.875rem;
+}
+
+.next {
+  left: 7rem;
+}
+
+.main-image__content {
+  position: absolute;
+  width: 37vw;
+  top: 2rem;
+  left: 3.25rem;
+  bottom: 2rem;
+}
+
+.main-image__info {
+  position: absolute;
+  bottom: 0;
+}
+
+.main-image__title {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.main-image__subtitle {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.main-image__number-page {
+  margin-left: 13.25rem;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #fff;
+}
+
+.main-image__page {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.content {
+  margin-top: 3.5rem;
+  position: absolute;
+  right: 0;
+  width: 53vw;
+}
+
+.wrapper__container {
+  padding: 0 3.25rem;
+}
+
+.subtitle {
+  color: #8a94a6;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: #192b3f;
+}
+
+.info__title {
+  margin-top: 1.5rem;
+}
+
+.text {
+  font-size: 20px;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #8a94a6;
+  opacity: 0.8;
+}
+
+.info__text {
+  margin-top: 1rem;
+  width: 62%;
+}
+
+.parameters {
+  border-top: 1px solid #e1e6ed;
+  border-bottom: 1px solid #e1e6ed;
+  display: flex;
+}
+
+.content__parameters {
+  margin-top: 0.5rem;
+}
+
+.parameters__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.parameters__block {
+  padding: 1rem 3rem 1rem 0;
+}
+
+.parameters__block:last-child {
+  margin-left: 1.3rem;
+}
+
+.buttons-wrapper {
+  padding-top: 0.75rem;
+  display: flex;
+}
+
+.colour__button,
+.size__button,
+.quantity__button {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  color: #8a94a6;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.colour__button:hover,
+.size__button:hover {
+  background: url(../img/icons/Ellipse_hover.png) no-repeat center;
+}
+
+.colour__button:focus,
+.size__button:focus {
+  background: url(../img/icons/Ellipse_focus.png) no-repeat center;
+}
+
+.colour__button:not(:first-child),
+.size__button:not(:first-child) {
+  margin-left: 0.35rem;
+}
+
+.quantity__result {
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  vertical-align: center;
+  color: #8a94a6;
+}
+
+.quantity__button:hover {
+  background: url(../img/icons/Ellipse-mini_hover.png) no-repeat center;
+}
+
+.cost__result {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: #c9b8a8;
+}
+
+.cost__cents {
+  font-size: 1.8rem;
+  color: #8a94a6;
+}
+
+.parameters__logo {
+  margin: 3.125rem 10.5rem 0 0;
+}
+
+.details__subtitle {
+  margin-top: 1.5rem;
+}
+
+.details__text {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.details__info {
+  margin-top: 0.5rem;
+  line-height: 1.25rem;
+  color: #8a94a6;
+}
+
+.button-order {
+  margin-top: 4.5rem;
+}
+
+.main-button {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0;
+  border: none;
+  color: #fff;
+  background-color: #192b3f;
+  cursor: pointer;
+  font-family: "Rajdhani";
+}
+
+.main-button:hover {
+  background-color: #2e4055;
+}
+
+.main-button:active {
+  background-color: #3b536d;
+}
+
+.content__accordion {
+  margin-top: 2rem;
+}
+
+.accordion__item {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e1e6ed;
+}
+
+.accordion__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #192b3f;
+  background: url(../img/icons/+.svg) no-repeat right;
+  cursor: pointer;
+}
+
+.accordion__text {
+  color: #8a94a6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.accordion__p {
+  margin-top: 1rem;
+}
+
+.active {
+  padding-bottom: 1rem;
+  background: url(../img/icons/–.svg) no-repeat right;
+}
+
+.content__collections {
+  margin-top: 1.5rem;
+}
+
+.collections__wrapper {
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.collections__card:last-child {
+  margin-left: 1.5rem;
+}
+
+.collections__card {
+  position: relative;
+  width: 18.5rem;
+  width: 100%;
+  height: 10rem;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.collections__kingsman {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(53, 41, 37, 0.22) 100%
+    ),
+    url(../img/Kingsman_style.png) no-repeat;
+  background-size: 100%;
+}
+
+.collections__denim {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(53, 41, 37, 0.22) 100%
+    ),
+    url(../img/Denim_goddess.png) no-repeat;
+  background-size: 100%;
+}
+
+.collections__info {
+  position: absolute;
+  margin-left: 1rem;
+  bottom: 0.75rem;
+}
+
+.collections__title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.collections__text {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #fff;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.content__subscribe {
+  margin-top: 4rem;
+}
+
+.subscribe__title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #192b3f;
+}
+
+.subscribe__subtitle {
+  padding-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #8a94a6;
+  opacity: 0.8;
+}
+
+.subscribe__form {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  width: 74%;
+  max-width: 28.5rem;
+  font-size: 1rem;
+  height: 2.75rem;
+  display: block;
+  color: #8a94a6;
+  background-color: #e1e6ed;
+  border-radius: 1px;
+  border-style: none;
+  line-height: 2.5rem;
+}
+
+.gender {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.gender__title {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #8a94a6;
+}
+
+.radio {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.radio__buttons {
+  display: flex;
+}
+
+.radio__input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.radio__label {
+  padding-left: 1.75rem;
+
+  font-size: 1rem;
+  color: #192b3f;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.radio__label:before {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+
+  border: 1px solid #e1e6ed;
+  background-color: #fff;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: border 0.1s linear;
+}
+
+.radio__label:after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+
+  background-color: #192b3f;
+  border-radius: 50%;
+  opacity: 0;
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+
+  transition: opacity 0.1s linear;
+}
+
+.radio__input:checked + .radio__label:after {
+  opacity: 1;
+}
+
+.content__checkbox {
+  margin-top: 2.5rem;
+}
+
+.checkbox {
+  position: relative;
+}
+
+.checkbox__input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox__label {
+  padding-left: 1.75rem;
+  font-size: 1rem;
+  color: #192b3f;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.checkbox__label:before {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+
+  border: 1px solid #e1e6ed;
+  background-color: #fff;
+  border-radius: 1px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: background 0.1s linear, border 0.1s linear;
+}
+
+.checkbox__label:after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  background: url("../img/icons/check.svg") no-repeat;
+  background-size: 12px 12px;
+  opacity: 0;
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+
+  transition: opacity 0.1s linear;
+}
+
+.checkbox__input:checked + .checkbox__label:before {
+  background-color: #192b3f;
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+  opacity: 1;
+}
+
+.button-subscribe {
+  margin-top: 1rem;
+}
+
+@media (max-width: 720px) {
+  .wrapper {
+    display: block;
+  }
+
+  .main-image {
+    position: static;
+    width: 100vw;
+  }
+  .slide {
+    position: relative;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    bottom: 2.5rem;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 1.625rem;
+  }
+
+  .next {
+    left: 4.75rem;
+  }
+
+  .main-image__content {
+    position: absolute;
+    width: 100vw;
+    top: 1.5rem;
+    left: 1rem;
+    bottom: 2rem;
+  }
+
+  .main-image__logo {
+    width: 4rem;
+  }
+
+  .main-image__title {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .main-image__subtitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    opacity: 0.8;
+    color: #fff;
+  }
+
+  .main-image__number-page {
+    margin-left: 10rem;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #fff;
+  }
+
+  .main-image__page {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  .content {
+    margin-top: 0;
+    width: 100vw;
+  }
+
+  .wrapper__container {
+    padding: 0 1rem;
+  }
+
+  .subtitle {
+    color: #8a94a6;
+    font-weight: bold;
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #192b3f;
+  }
+
+  .info__title {
+    margin-top: 1.5rem;
+  }
+
+  .info__text {
+    width: 92%;
+  }
+
+  .parameters__block {
+    padding: 1rem 6.5rem 1rem 0;
+  }
+
+  .parameters__logo {
+    margin: 3.125rem 8.25rem 0 0;
+  }
+
+  .collections__wrapper {
+    display: block;
+  }
+
+  .collections__card {
+    width: 100%;
+    height: 18rem;
+  }
+
+  .collections__card:last-child {
+    margin-top: 1.75rem;
+    margin-left: 0;
+  }
+
+  .collections__kingsman {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(53, 41, 37, 0.22) 100%
+      ),
+      url(../img/Kingsman_style.png) no-repeat center;
+    background-size: 100%;
+  }
+
+  .collections__denim {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(53, 41, 37, 0.22) 100%
+      ),
+      url(../img/Denim_goddess.png) no-repeat center;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-image {
+    height: 37.5rem;
+  }
+
+  .slide {
+    height: 37.5rem;
+  }
+
+  .slide__img {
+    object-fit: cover;
+  }
+
+  .main-image__content {
+    position: absolute;
+    width: 90vw;
+    top: 1.5rem;
+    left: 1rem;
+    bottom: 2rem;
+  }
+
+  .main-image__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .main-image__subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .main-image__number-page {
+    margin-left: 10rem;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #fff;
+  }
+
+  .main-image__page {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .info__title {
+    margin-top: 1rem;
+  }
+
+  .info__text {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .parameters {
+    display: block;
+  }
+
+  .parameters__block {
+    padding: 1rem 6.5rem 1rem 0;
+  }
+
+  .parameters__logo {
+    margin: 0;
+  }
+
+  .button-order {
+    margin-top: 2.5rem;
+  }
+
+  .collections__card {
+    width: 100%;
+    height: 10rem;
+  }
+
+  .gender {
+    display: block;
+  }
+
+  .radio:first-child {
+    margin-left: 0;
+  }
+}
