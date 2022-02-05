@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Rajdhani", sans-serif;
+  font-display: swap;
+  src: url("fonts/Rajdhani-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rajdhani", sans-serif;
+  font-display: swap;
+  src: url("fonts/Rajdhani-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rajdhani", sans-serif;
+  font-display: swap;
+  src: url("fonts/Rajdhani-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
 html,
 body {
   font: 16px/1.5 "Rajdhani";
@@ -154,19 +176,23 @@ body {
 .quantity__button {
   width: 2rem;
   height: 2rem;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 50%;
   color: #8a94a6;
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .colour__button:hover,
-.size__button:hover {
-  background: url(../img/icons/Ellipse_hover.png) no-repeat center;
+.size__button:hover,
+.quantity__button:hover {
+  border: 1px solid #8a94a6;
 }
 
 .colour__button:focus,
@@ -185,10 +211,6 @@ body {
   line-height: 2rem;
   vertical-align: center;
   color: #8a94a6;
-}
-
-.quantity__button:hover {
-  background: url(../img/icons/Ellipse-mini_hover.png) no-repeat center;
 }
 
 .cost__result {
